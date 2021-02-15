@@ -1,7 +1,5 @@
 def nums(a, b):
     for i in range(a, b):
-        # if i % 2 == 0:
-        #     pass
         if i % 2 != 0:
             print(i)
 

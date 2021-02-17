@@ -12,7 +12,7 @@ while True:
             exercises.append(num)
     except ValueError:
         if user_input == exit:
-            print(f'You have finished {set} sets')
+            print(f'You have finished {set-1} sets')
             print(f'Total number of exercises done is {sum(exercises)} ' )
             print(f'Your best set contained {max(exercises)} exercises')
             print(f'You was pretty tired during the one set and made only {min(exercises)} exercises ')

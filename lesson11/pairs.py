@@ -1,6 +1,5 @@
 biggest_cities = ['Tokyo', 'Delhi', 'Shanghai','Mexcio City', 'Sao Paulo'
                   'Mumbai', 'Kinki major metropolitan area', 'Cairo']
-pairs = map(lambda city: f' {biggest_cities[biggest_cities.index(city)]}, {biggest_cities.index(city) +1}'
-            if city in biggest_cities else None, biggest_cities)
+pairs = zip(biggest_cities, range(1,len(biggest_cities)+1))
 
 print(list(pairs))

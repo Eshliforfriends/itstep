@@ -1,10 +1,9 @@
 def find_all_entry(text, symbol):
     index_list = []
-    for i, elem in enumerate(text):
-        if elem == symbol:
-            x = text.index(i)
-            index_list +=  x
-            return index_list
+    for i in text:
+        if i == symbol:
+            index_i = text.index(i)
+            return index_i
 
 text = ['v', 55, 'f', 6, 7, 9]
 symbol = 55

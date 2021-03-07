@@ -1,16 +1,18 @@
 def only_odd_arguments(func):
     def wrapper_odd(*args):
-        n = 0
+        n = 1
         for i in args:
             for j in args:
                 if j % 2 != 0:
-                    if n <= len(args):
+                    if n < len(args):
                         n += 1
                         continue
-                    else:
+                    elif n == len(args):
                         return print(func(*args))
                 else:
+                    print('Enter odd arguments')
                     break
+            break
     return wrapper_odd
 
 @only_odd_arguments
@@ -24,5 +26,5 @@ add(5, 5)
 def multiple(a, b, c, d, e):
    return a*b*c*d*e
 
-multiple(4,2,7,1,5)
-multiple(7,3,11,9,3)
+multiple(11,7,8,1,5)
+multiple(5,5,11,9,5)

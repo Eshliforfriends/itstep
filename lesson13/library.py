@@ -4,14 +4,18 @@ books_names = ['Once upon a time', 'Great book', 'Exactly what you want to read'
 def library(books_names, issue_year):
     issue_year = random.sample(range(1880, 2021), len(books_names))
     library = list(zip(books_names, issue_year))
-    print(library)
+
     def sort_year(books_names, issue_year):
         library.sort(key=lambda x: x[1])
-        return library
+        books_names1, issue_year1 = zip(*library)
+        for a, b in zip(issue_year1, books_names1):
+            print(f' Year: {a}; Book title: {b}')
 
     def books_list(books_names, issue_year):
         library.sort(key=lambda x: x[0])
-        return library
+        books_names2, issue_year2 = zip(*library)
+        for a, b in zip(books_names2, issue_year2):
+            print(f' Book title: {a}; Year: {b}')
 
     keys = {'Y': sort_year,
             'L': books_list

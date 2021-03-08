@@ -1,7 +1,7 @@
 import random
 id_codes = []
 phone_numbers = []
-users = ['John', 'Mike', 'Olivia', 'Peter', 'Charlie', 'Bob']
+users = ['John', 'Mike', 'Olivia', 'Peter', 'Charlie', 'Bob', 'Nik']
 def handbook(users, id_codes, phone_numbers):
     id_codes = random.sample(range(1000, 9999), len(users))
     phone_numbers = random.sample(range(1000000, 9999999), len(users))

@@ -53,24 +53,25 @@ def users():
                 print(error_input)
 
         users_data.append(new_user)
-        print(users_data)
 
     def view_all(data):
-        return data
-
+        for n, elem in enumerate(data):
+            print(f'User {n+1}')
+            for l in elem:
+                print(elem[l])
+    keys = {'1': add_new,
+            '2': view_all
+    }
     while True:
-        user_input = input('Enter 1 to add new user, 2 to view all added users and 3 to exit\n')
-        if user_input != 3:
-            if user_input == 1:
-                print(add_new(users_data))
-            elif user_input == 2:
-                print(view_all(users_data))
+        user_input = input('Enter 1 to add new user, 2 to view all added users and "3" to exit\n')
+        if user_input != '3':
+            if user_input in keys:
+                print(keys[user_input](users_data))
             else:
                 print(error)
         else:
             break
             print('Process is finished')
-
 
 print(users())
 

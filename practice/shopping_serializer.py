@@ -15,19 +15,14 @@ with open('shopping_list.pkl', 'wb') as f:
     data_s = pickle.dump(shopping_list, f)
     print(data_s)
 
-with open('shopping_list.pkl', 'rb') as f:
-    data_new = pickle.load(f)
-    print(data_new)
 
 import json
 
 #jsonh
 with open('shopping_list.json', 'w') as n:
-    json.dump(shopping_list, n)
+    data_j = json.dump(shopping_list, n)
+    print(data_j)
 
-with open('shopping_list.json', 'rb') as n:
-    data_new_j = json.load(n)
-    print(data_new_j)
 
 
 

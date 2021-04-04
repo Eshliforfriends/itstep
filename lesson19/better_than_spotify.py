@@ -5,8 +5,8 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
-
-def main(write = False):
+#Lytyn
+def main():
     func_music_library = []
     record = {
         "Назва групи": str,
@@ -46,6 +46,7 @@ def main(write = False):
         record["Альбоми"] = albums
         func_music_library.append(record)
 
+#Maliarchuk
     def change_record():
         for n, i in enumerate(func_music_library):
             print(n + 1, i)
@@ -104,7 +105,7 @@ def main(write = False):
         except ValueError:
             print('Error')
 
-
+# Lytyn
     def del_record():
         for n, i in enumerate(func_music_library):
             print(n + 1, i)
@@ -148,6 +149,7 @@ def main(write = False):
         if key.lower() in box:
             box[key.lower()]()
         elif key.lower() == 'e':
+#Maliarchuk
             with open('../lesson19/func_music_library.json', 'w') as f:
                 data_j = json.dump(func_music_library, f)
             print('Закінчення роботи з файлом')
